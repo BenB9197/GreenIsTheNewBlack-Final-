@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Joshua Lawson
+October 20, 2016
+Green is the New Black (GNB)
+GNB exists to promote scientific awareness for endangered species in North Carolina. Taking
+the global concept of environmental education and bringing down to the local level.
+Written October 15 and revised up to November 23.
+Activity Login: This is the XML file that displays the buttons and layout on the Login screen.
+It goes hand in hand with the Login java file.
+The inputs are the username and password in the two editText fields. It outputs those to the Login
+Request. It also outputs the visual front-end using textViews, editTexts, and Buttons.
+This could be expanded in infinite ways but we would like to add more graphics and a fade out in
+the future.
+-->
+
+<!--
+Initial setup for the layout of the Login screen. It sets the Android layout.
+Joshua Lawson
+October 20, 2016
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#0e8c3a"
+    tools:context="com.example.ben.greenisthenewblack.LoginActivity">
+
+    <!--
+	Creates the button that displays "Start EXPLORING!!!" on the Login screen.
+	Joshua Lawson
+	October 20, 2016
+	-->
+    <Button
+        android:text="START EXPLORING!!!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blogin"
+        android:layout_below="@+id/pword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <!--
+        Creates the textView that displays "Register Here" on the Login screen.
+        Joshua Lawson
+        October 20, 2016
+        -->
+    <TextView
+        android:text="Register Here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv"
+        android:layout_below="@+id/blogin"
+        android:layout_centerHorizontal="true" />
+
+    <!--
+	Creates the editText that displays "Username" on the Login screen.
+	Joshua Lawson
+	October 20, 2016
+	This is an input box for the user to input his username for the login validation.
+	-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email"
+        android:hint="Username"
+        android:textIsSelectable="false"
+        android:layout_marginTop="149dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="normal|bold" />
+
+    <!--
+        Creates the editText that displays "Password" on the Login screen.
+        Joshua Lawson
+        October 20, 2016
+        This is an input box for the user to input the password for the login validation.
+        -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/pword"
+        android:hint="Password"
+        android:textIsSelectable="false"
+        android:layout_below="@+id/email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="normal|bold" />
+
+    <!--
+	Creates the textView that displays "WELCOME, PLEASE LOGIN" at the top of the Login screen.
+	Joshua Lawson
+	October 20, 2016
+	-->
+    <TextView
+        android:text="WELCOME, PLEASE LOGIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:fontFamily="serif"
+        android:gravity="center" />
+
+</RelativeLayout>

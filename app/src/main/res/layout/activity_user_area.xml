@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Joshua Lawson
+October 15, 2016
+Green is the New Black (GNB)
+GNB exists to promote scientific awareness for endangered species in North Carolina. Taking the
+global concept of environmental education and bringing down to the local level.
+Written October 15 and revised up to November 23.
+User Area Activity: This is the XML file that displays the buttons and layout on the Main Menu
+screen. It goes hand in hand with the User Area java file.
+The inputs are the button presses. The output being a redirection to the Map screen or Wildlife
+screen.
+It also outputs the visual front-end using textViews, and Buttons.
+This could be expanded in infinite ways but we would like to add more graphics and allow for
+more user interaction. Possibly a game.
+-->
+
+
+<!--
+Initial setup for the Main Menu. It sets the Android layout for Main Menu screen.
+Joshua Lawson
+October 15, 2016
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#0e8c3a"
+    tools:context="com.example.ben.greenisthenewblack.RegisterActivity">
+
+    <!--
+	Creates the textView that displays a welcome message from the User Area java file on the Main
+	Menu screen.
+	Joshua Lawson
+	October 15, 2016
+	-->
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/welcome"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:gravity="center" />
+
+    <!--
+	Creates the textView that displays a "Go to the Map!!!" above the button that redirects the
+	user to the map.
+	Joshua Lawson
+	October 15, 2016
+	-->
+    <TextView
+        android:text="Go to the Map!!!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_marginTop="59dp"
+        android:id="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:gravity="center" />
+
+    <!--
+	Creates the button that displays "EXPLORE!!!" on the Main Menu screen.
+	Joshua Lawson
+	October 20, 2016
+	-->
+    <Button
+        android:text="EXPLORE!!!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/bmap"
+        android:layout_below="@+id/textView"
+        style="@style/Widget.AppCompat.Button"
+        android:elevation="0dp" />
+
+    <!--
+	Creates the textView that displays a "Learn about the Wildlife!!!" above the button that
+	redirects the user to the Wildlife screen.
+	Joshua Lawson
+	October 15, 2016
+	-->
+    <TextView
+        android:text="Learn about the Wildlife!!!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/bmap"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center" />
+
+    <!--
+	Creates the button that displays "Learn!!!" on the Main Menu screen.
+	Joshua Lawson
+	October 15, 2016
+	-->
+    <Button
+        android:text="Learn!!!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blearn"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

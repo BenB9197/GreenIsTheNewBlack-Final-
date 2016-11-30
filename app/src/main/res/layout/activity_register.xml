@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Michael Lee
+October 27, 2016
+Green is the New Black (GNB)
+GNB exists to promote scientific awareness for endangered species in North Carolina. Taking the global concept of environmental
+education and bringing down to the local level.
+Written October 27 and revised up to November 23.
+Register Activity: This is the XML file that displays the button and layout on the Register screen. It goes hand in hand with the
+Register java file.
+The inputs are the name, username, and password in the three editText fields. It outputs those to the Register Request.
+It also outputs the visual front-end using editTexts, and a Button.
+This could be expanded in infinite ways but we would like to add more graphics and a fade out in the future.
+-->
+
+
+<!--
+Initial setup for the layout of the Register screen. It sets the Android layout.
+Michael Lee
+October 27, 2016
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="#0e8c3a">
+
+    <!--
+	Creates the editText that displays "Name" on the Register screen.
+	Michael Lee
+	October 27, 2016
+	This is an input box for the user to input his username for the Registration validation.
+	-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Name" />
+
+    <!--
+	Creates the editText that displays "Username" on the Register screen.
+	Michael Lee
+	October 27, 2016
+	This is an input box for the user to input his username for the Registration validation.
+	-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etUsername"
+        android:layout_below="@+id/etName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Username" />
+
+    <!--
+	Creates the editText that displays "Password" on the Register screen.
+	Michael Lee
+	October 27, 2016
+	This is an input box for the user to input his password for the Registration validation.
+	-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etPassword"
+        android:layout_below="@+id/etUsername"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Password" />
+
+    <!--
+	Creates the button that displays "Register" on the Register screen.
+	Michael Lee
+	October 27, 2016
+	-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/bRegister"
+        android:layout_below="@+id/etPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/etPassword"
+        android:layout_alignEnd="@+id/etPassword" />
+
+</RelativeLayout>

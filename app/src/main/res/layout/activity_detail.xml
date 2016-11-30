@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Ben Butler
+October 15, 2016
+Green is the New Black (GNB)
+GNB exists to promote scientific awareness for endangered species in North Carolina. Taking
+the global concept of environmental education and bringing down to the local level.
+Written October 29 and revised up to November 26.
+Detail Activity: This is the XML file that displays the layout and information regarding the
+selected wildlife. It goes hand in hand with the DetailActivity java file.
+The inputs for the screen would be considered the information sent over from the WildLifeActivity
+java file and the output would be the information being displayed in the corresponding TextViews
+and ImageView where the picture of the wildlife is displayed.
+This could be expanded in infinite ways but we would like to add more graphics and a fade out in
+the future, or also being accessible from the map screen.
+-->
+
+<!--
+Initial setup for the details display page. It sets the Android layout for details display screen.
+Ben Butler
+October 29, 2016
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#0e8c3a"
+    tools:context="com.example.ben.greenisthenewblack.DetailActivity">
+
+    <!--
+    Creates the ImageView that displays the image of the wildlife that was selected from the
+    wildlife database.
+    Ben Butler
+    October 29, 2016.
+    -->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
+
+    <!--
+    Creates the TextView that displays the common name of the wildlife that was selected from the
+    wildlife database.
+    Ben Butler
+    October 29, 2016.
+    -->
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/commonName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="normal|bold"
+        android:textSize="24sp" />
+
+    <!--
+    Creates the ScrollView which houses the Linear Layout form of the TextView that displays the
+    specific details about the wildlife selected. Allowing for scrolling action if the details
+    proceeds off the visible portion of the screen.
+    Ben Butler
+    October 29, 2016.
+    -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commonName"
+        android:scrollbars="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/details">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/detailsText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:textSize="18sp" />
+
+         </LinearLayout>
+    </ScrollView>
+
+    <!--
+    Creates the TextView that displays the scientific name of the wildlife that was selected from
+    the wildlife database.
+    Ben Butler
+    October 29, 2016.
+    -->
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scientificName"
+        android:layout_above="@+id/commonName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold"
+        android:textSize="24sp" />
+
+</RelativeLayout>

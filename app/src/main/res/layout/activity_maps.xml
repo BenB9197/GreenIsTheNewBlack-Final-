@@ -1,0 +1,27 @@
+<!--
+Joshua Lawson
+October 29, 2016
+Green is the New Black (GNB)
+GNB exists to promote scientific awareness for endangered species in North Carolina. Taking the global concept of environmental
+education and bringing down to the local level.
+Written October 29 and revised up to November 23.
+Activity Map: This is the XML file that displays the Google map within the app on the Map screen. It goes hand in hand with the
+Map java file.
+The input by the user is scrolling, swiping, and screen movement. The output is the visual map shown.
+This section needs to be expanded by having giving the user the ability to place tags and upload photos attached to tags.
+-->
+
+<!--
+Initial setup for the map. It sets the Android layout for Google Maps.
+Joshua Lawson
+October 29, 2016
+-->
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.MapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ben.greenisthenewblack.MapsActivity" />
